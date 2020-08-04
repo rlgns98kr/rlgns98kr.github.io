@@ -42,7 +42,7 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="#experience">Project</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
@@ -51,7 +51,7 @@
           <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          <a class="nav-link js-scroll-trigger" href="#interests">Books</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
@@ -71,7 +71,15 @@
           <a href="mailto:rlgns98kr@gmail.com">rlgns98kr@gmail.com</a>
         </div>
         <p class="lead mb-5">
-          <p style="color: black;">'어제의 나보다 나은 것이야 말로 진정으로 고귀한 것이다'</p>해밍웨이의 명언을 가치관삼아 개발자로서 한 단계씩 나아가고 있습니다.
+        <p style="color: black;">'어제의 나보다 나은 것이야 말로 진정으로 고귀한 것이다'</p>해밍웨이의 명언을 가치관삼아 개발자로서 한 단계씩 나아가고 있습니다.
+        </p>
+        <p>
+          <br />빠르게 성장하는 개발자입니다.
+          <br />2020년에 개발을 시작하여 프로젝트를 진행하였습니다.
+          <br />프로젝트마다 새로운 기술스택을 사용하였고 모두 짧은 기간 내에 공부하여 사용하였습니다.
+          <br />어떤 기술스택이더라도 끝까지 물고 늘어져서 배울 수 있는 자신이 있습니다.
+          <br />
+          <br />아직 부족한 점이 많고 보완해야할 부분들이 많지만 개발을 좋아하기 때문에 빠르게 극복할 수 있습니다.
         </p>
         <br />
         <div class="social-icons">
@@ -86,19 +94,23 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
+        <h2 class="mb-5">Project</h2>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">기초를 닦다</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
-              going forward, a new normal that has evolved from generation X is on the runway heading towards a
-              streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
-              offshoring.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2013 - Present</span>
+            <h3 class="mb-0" style="text-transform: none;">Image-RESTful-API</h3>
+            <div class="subheading mb-3">이미지 CRUD API 서버</div>
+            <p>이미지 CRUD API 입니다. 허용되는 확장자는 jpg, gif, png 이며 GET, POST, PUT, DELETE, OPTIONS, HEAD 요청을 지원합니다.</p>
+            <p>GET, PUT, DELETE 요청의 경우 /images/:no의 URL로 요청을 보냅니다. POST 요청의 경우 /images의 URL로 요청을 보냅니다. POST, PUT 요청의 경우
+              요청의 바디에 BASE64로 인코딩된 IMAGE를 포함해야 합니다.</p>
+            <p style="color: black; font-weight: bold;"><br />요청 예시</p>
+            <p>PUT('/images/:no', send_params) send_params={image:base64로 인코딩된 이미지}</p>
+            <p>POST('/images', send_params) send_params={no:업로드할 숫자, image:base64로 인코딩된 이미지}</p>
+            <p style="color: black; font-weight: bold;"><br />개선해야할 사항</p>
+            <p>- HTTP의 응답코드에 해당하는 에러메시지들을 배열에 저장해놓고 사용하기</p>
+            <p>- USER별 소유한 이미지만 접근할 수 있도록 인증기능 적용</p>
+            <p style="color: black; font-weight: bold;"><br />적용 사항</p>
+            <p>- 모든 도메인에 대하여 허용하도록 CORS 적용</p>
           </div>
         </div>
 
@@ -153,24 +165,52 @@
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">University of Colorado Boulder</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Science - Web Development Track</div>
-            <p>GPA: 3.23</p>
+            <h3 class="mb-1">멀티캠퍼스 - 4차 산업혁명 선도인력 양성</h3>
+            <div class="subheading mb-3">시큐어 코딩 기반 블록체인 개발</div>
+            <div>Fullstack 개발 및 보안 구축
+              <p>
+                - Node.js, JavaScript, React, Vue, RDBMS, NoSQL
+              </p>
+            </div>
+            <div>실무 개발 보안기술 활용(시큐어 코딩)
+              <p>
+                - 네트워크, 웹 보안, 시큐어 코딩
+              </p>
+            </div>
+            <div>블록체인 서비스 개발 및 보안 기술 구현
+              <p>
+                - Linux, Docker, Hyperledger
+              </p>
+            </div>
+            <div>실무 기반 프로젝트</div>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">August 2006 - May 2010</span>
+            <span class="text-primary">2019.11 - 2020.07</span>
           </div>
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
           <div class="resume-content">
-            <h3 class="mb-0">James Buchanan High School</h3>
-            <div class="subheading mb-3">Technology Magnet Program</div>
-            <p>GPA: 3.56</p>
+            <h3 class="mb-1">멀티캠퍼스 - 청년 취업 아카데미</h3>
+            <div class="subheading mb-3">자바 알고리즘을 이용한 반응형 웹프로그래밍 전문가 과정</div>
+            <div>데이터 베이스 활용
+              <p>
+                - Oracle, JDBC, DB모델링
+              </p>
+            </div>
+            <div>JAVA 웹 애플리케이션 제작
+              <p>
+                - Servlet, JSP, React
+              </p>
+            </div>
+            <div>Spring Framework
+              <p>
+                - MVC Model, Spring
+              </p>
+            </div>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">August 2002 - May 2006</span>
+            <span class="text-primary">2020.07 - 현재</span>
           </div>
         </div>
 
@@ -183,60 +223,48 @@
       <div class="w-100">
         <h2 class="mb-5">Skills</h2>
 
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <div class="subheading mb-3">Stacks</div>
         <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
           <li class="list-inline-item">
             <i class="fab fa-js-square"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-angular"></i>
+            <i class="fab fa-node"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-java"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-python"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-react"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-node-js"></i>
+            <i class="fab fa-vuejs"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-sass"></i>
+            <i class="fab fa-android"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-less"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-wordpress"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-gulp"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-grunt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-npm"></i>
+            <i class="fab fa-docker"></i>
           </li>
         </ul>
 
-        <div class="subheading mb-3">Workflow</div>
+        <div class="subheading mb-3">ETC</div>
         <ul class="fa-ul mb-0">
           <li>
             <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design</li>
+            Google Firebase</li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Cross Browser Testing &amp; Debugging</li>
+            Hyperledger Fabric</li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Cross Functional Teams</li>
+            Fido</li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum</li>
+            WebRTC</li>
         </ul>
       </div>
     </section>
@@ -245,13 +273,11 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier
-          and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and
-          kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows,
-          I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements
-          in the front-end web development world.</p>
+        <h2 class="mb-5" style="text-transform: none;">BOOKS I am reading</h2>
+        <div class="subheading" style="text-transform: none;">Clean Architecture: A Craftsman's Guide to Software
+          Structure and Design - Robert C. Martin</div>
+        <br />
+        <div class="subheading" style="text-transform: none;">You Dont Know JS - Kyle Simpson</div>
       </div>
     </section>
 
@@ -263,30 +289,12 @@
         <ul class="fa-ul mb-0">
           <li>
             <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Mobile Web Specialist - Google Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
             1<sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            Place - 멀티캠퍼스 4차 산업혁명 선도인력 양성 해커톤 프로젝트 우수상 - 니차도오라이</li>
           <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
+            <i class="fa-li fa fa-trophy"></i>
             2<sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3<sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005</li>
+            Place - 멀티캠퍼스 4차 산업혁명 선도인력 양성 개인 우수상</li>
         </ul>
       </div>
     </section>
