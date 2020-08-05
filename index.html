@@ -209,14 +209,35 @@
             <div class="subheading mb-3" style="text-transform: none;">Blockchain-Fido-API</div>
             <p style="color: black; font-weight: bold;"><br />팀 구성 : 4명</p>
             <p>Blockchain과 Fido를 활용한 DID 생체인증 API</p>
-            <p>Fido2를 기반으로 서버를 구성하여 개인의 지문을 등록합니다. 사용자 인증을 위한 POST 요청 URL을 제공합니다. 웹에서 서버에 POST요청을 보낸 뒤(Pending)
-              핸드폰(Fido기기)으로 인증을 완료하면 서버는 웹 요청에 대하여 응답합니다.</p>
+            <p>Fido2를 기반으로 개인의 지문을 등록합니다. 사용자가 로컬기기에서 생체인증을 완료하면 로컬기기에서 RSA key쌍을 생성합니다. 사용자의 지문에 대응되는 RSA key 중 공개키, 사용자의 핸드폰번호가 블록체인에 저장됩니다.</p>
+            <p>사용자 인증을 위한 POST 요청 URL을 제공합니다. 웹에서 서버에 POST요청을 보낸 뒤(Pending) 핸드폰(Fido기기)으로 인증을 완료하면 서버는 웹 요청에 대하여 응답합니다.</p>
             <p style="color: black; font-weight: bold;"><br />요청 예시</p>
             <p>/auth/registersignin 의 URL로 POST 요청 {phoneNumber:유저의 핸드폰 번호}</p>
-            <p></p>
+            <p style="color: black; font-weight: bold;"><br />Architecture</p>
+            <p style="color: black;">전체 구조</p>
+            <br/>
+            <div>
+              <img style="width: 50vw; height: auto;" src="img/DID.png">
+            </div>
+            <p style="color: black;"><br/>FIDO + DID</p>
+            <br />
+            <div>
+              <img style="width: 50vw; height: auto;" src="img/DIDregister.png">
+            </div>
+            <br />
+            <p style="color: black; font-weight: bold;"><br />적용 사항</p>
+            <p>- Docker Container로 구성된 Hyperledger Network 구축</p>
+            <p>- 사용자 등록 시 인증번호를 전송하여 핸드폰 번호 검증</p>
+            <p>- Fido API를 사용하기 위하여 도메인 및 SSL 구성(Fido API는 HTTPS에서만 동작)</p>
+            <p>- 인증번호 입력 시 Brute Force 공격 방지</p>
+            <p>- 타 웹에서 인증 요청 시 Pending, 사용자의 로컬기기에서 인증을 완료하면 응답</p>
+            <p style="color: black; font-weight: bold;"><br />개선해야할 사항</p>
+            <p>- Pending 구현 시 사용자의 인증 상태를 서버의 변수에 저장하지 않고 DB에 저장</p>
+            <p style="color: black; font-weight: bold;"><br />사용 기술</p>
+            <P>- Fido, JavaScript(ChainCode), Node.js, ExpressJS, HTML, Hyperledger, Docker</P>
             <p style="color: black; font-weight: bold;"><br />시연 영상</p>
             <div>
-              <iframe style="width: 50vw; height: 28.3vw;"
+              <iframe style="width: 50vw; height: 28.3vw;" allowfullscreen
                 src="https://drive.google.com/file/d/1mieySI1uw8b9Uv7GXWLALYf0l2Sw2Zbk/preview"></iframe>
             </div>
             <br />
@@ -236,10 +257,17 @@
           <div class="resume-content">
             <h3 class="mb-0">Richard-All-Right</h3>
             <div class="subheading mb-3">Firebase기반 주차장 공유 어플리케이션</div>
-            <p></p>
+            <p style="color: black; font-weight: bold;"><br />팀 구성 : 4명</p>
+            <p>사용되지 않는 원룸의 주차장을 공유하여 거래하는 플랫폼입니다. 현재 주차장들은 Dummy Data로 구성하여 배포까지 완료된 어플리케이션입니다.</p>
+            <p style="color: black; font-weight: bold;"><br />적용 사항</p>
+            <p>- 사용자가 같은 주차장을 동시 예약 시 DB에 Block 처리(Firebase Transaction)</p>
+            <p style="color: black; font-weight: bold;"><br />개선해야할 사항</p>
+            <p>- 휴대폰 크기에 맞게 반응형 UI제작</p>
+            <p style="color: black; font-weight: bold;"><br />사용 기술</p>
+            <p>- KakaoPay API, Google Maps API, Firebase, Java, Android</p>
             <p style="color: black; font-weight: bold;"><br />시연 영상</p>
             <div>
-              <iframe style="width: 50vw; height: 28.3vw;"
+              <iframe style="width: 50vw; height: 28.3vw;" allowfullscreen
                 src="https://drive.google.com/file/d/1VA_bqVysFBRebfx3mPPTnNkeHLmJ5SYb/preview"></iframe>
             </div>
             <br />
